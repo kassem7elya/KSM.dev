@@ -1,0 +1,445 @@
+/* start variables  */
+/* end variables  */
+/* start global rules  */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+/* end global rules  */
+/* start media  */
+/* mobile  */
+@media (max-width: 767px) {
+    .container {
+        width: 750px;
+    }
+
+    .header .container .navbar {
+        display: none;
+    }
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+}
+
+/* Small */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .about .container {
+        width: 800px;
+    }
+}
+
+/* Medium */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+
+    .about .container {
+        width: 100px;
+    }
+}
+
+/* Large */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/* end media  */
+/* start header  */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+.logo {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding-left: 30px;
+}
+
+.logo span {
+    color: blue;
+}
+
+.navbar {
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.header a {
+    padding: 20px;
+    margin-right: 40px;
+    color: blue;
+}
+
+a:hover {
+    opacity: 60%;
+}
+
+/* start humbarger  */
+.mobile-nav a:hover {
+    background-color: #24104f;
+}
+
+.hamburger {
+    position: relative;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+    z-index: 10000000000;
+}
+
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: blue;
+    margin: 6px 0px;
+    transition: 0.4s;
+}
+
+.hamburger.active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+    background-color: white;
+}
+
+.hamburger.active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+    background-color: white;
+}
+
+.hamburger.active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    background-color: blue;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: rgb(152, 0, 253);
+    color: #FFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* end hamburger  */
+
+/* end header  */
+/* start landing   */
+
+.landing .container,
+.projects,
+.contact {
+    background-image: url(../image/Sans\ titre-1.png);
+    height: 100%;
+    background-size: cover;
+    width: 100%;
+}
+
+.landing .container .info {
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.landing .container .info h6 {
+    font-size: 30px;
+    margin: 20px 0;
+}
+
+.landing .container .info .wel {
+    padding-top: 60px;
+}
+
+.landing .container .info h1 {
+    font-size: 55px;
+    letter-spacing: 2.5px;
+    font-weight: bold;
+    padding: 30px 0;
+    width: auto;
+}
+
+.landing .container .info h1 span {
+    color: blue;
+}
+
+.landing .container .btn {
+    font-size: 40px;
+    text-align: center;
+}
+
+.landing .container .btn button {
+    padding: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.landing .container .social {
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    padding: 20px;
+}
+
+.landing .container .social a {
+    color: white;
+    padding-left: 15px;
+    padding-bottom: 92px;
+}
+
+.landing .container .btn button a {
+    text-decoration: none;
+    color: blue;
+    font-weight: bold;
+}
+
+/* end landing */
+
+/* start about  */
+.about {
+    background-color: #f1f1f1;
+    min-height: 50vh;
+}
+
+.about .title,
+.projects .title,
+.services .title,
+.contact .title {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    padding: 30px;
+    color: blue;
+}
+
+.about .container {
+    font-size: 30px;
+    text-align: center;
+    padding: 60px 0;
+    margin-left: 8px;
+    width: auto;
+}
+
+.about .container p a {
+    color: blue;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* end  about  */
+/* start projects  */
+.projects .title {
+    color: white;
+}
+
+.projects .container,
+.services .container,
+.contact .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: auto;
+}
+
+.projects .container .card,
+.services .container .card,
+.contact .container .card {
+    background-color: white;
+    border: solid 3px #601cfc;
+    min-height: 14em;
+    width: 22em;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 20px;
+    transition: 0.9s ease;
+}
+
+.projects .container .card:hover,
+.services .container .card:hover,
+.contact .container .card:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+}
+
+.projects .container .card .image img,
+.services .container .card .image img {
+    max-height: 100%;
+    width: 100%;
+    transition: 0.9s;
+}
+
+.projects .container .card .info,
+.services .container .card .info {
+    text-align: center;
+    background-color: white;
+}
+
+.projects .container .card .info p,
+.services .container .card .info p {
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.projects .container .card .info h3,
+.services .container .card .info h3,
+.contact .container .card .info h3 {
+    font-weight: bold;
+    padding: 10px;
+}
+
+.projects .container .card .info a,
+.services .container .card .info a,
+.contact .container .card .info a {
+    text-decoration: none;
+    color: blue;
+    padding-bottom: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    transition: 0.7s;
+    font-weight: bold;
+}
+
+.projects .container .card .info a:hover,
+.services .container .card .info a:hover,
+.contact .container .card .info a:hover {
+    color: #601cfc;
+    transform: scale(1.1);
+}
+
+/* end projects  */
+/* start services  */
+.services {
+    background-color: #f1f1f1;
+}
+
+/* end services  */
+/* start contact  */
+.contact .title {
+    color: white;
+}
+
+.contact {
+    padding-bottom: 60px;
+}
+
+.contact .container .card {
+    width: fit-content;
+}
+
+.contact .container .card h2 {
+    text-align: center;
+    padding: 30px;
+    font-size: 30px;
+}
+
+.contact .container .card .info a {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .container .card .info .social {
+    display: flex;
+    justify-content: center;
+}
+
+.contact .container .card .info .social a {
+    padding: 20px 10px;
+}
+
+/* end contact  */
+/* start footer  */
+.footer {
+    background-color: #eee;
+}
+
+.footer .container {
+    padding: 20px 0;
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer .container .copy {
+    font-weight: bold;
+    padding-left: 20px;
+
+}
+
+.footer .container .copy span {
+    color: blue;
+}
+
+.footer .container .social {
+    display: flex;
+}
+
+.footer .container .social a {
+    font-size: 20px;
+    color: blue;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
